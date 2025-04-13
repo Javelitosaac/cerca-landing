@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CERCA - Conexión Real</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: linear-gradient(to bottom right, #ffd4ec, #ffe8fc);
+      color: #4a4a4a;
+      padding: 20px;
+      scroll-behavior: smooth;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      animation: fadeIn 1s ease-in-out;
+    }
+    header img {
+      height: 50px;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #ff5e99;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ff4182;
+    }
+    .hero {
+      text-align: center;
+      margin: 60px auto;
+      max-width: 700px;
+      animation: fadeUp 1.5s ease-in-out;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      color: #ff5e99;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin: 20px 0;
+    }
+    .cta-button {
+      background-color: #ff5e99;
+      color: white;
+      padding: 14px 28px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #ff4182;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin: 60px 0;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .feature {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .feature:hover {
+      transform: translateY(-10px);
+    }
+    .feature h3 {
+      color: #ff5e99;
+      margin-bottom: 10px;
+    }
+    .form-section {
+      background-color: white;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 600px;
+      margin: 0 auto 60px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      animation: fadeUp 2s ease-in-out;
+    }
+    .form-section h2 {
+      color: #ff5e99;
+      margin-bottom: 20px;
+    }
+    .form-section input[type="email"] {
+      padding: 12px;
+      width: 70%;
+      max-width: 400px;
+      border: 2px solid #ff5e99;
+      border-radius: 25px;
+      margin-right: 10px;
+      outline: none;
+    }
+    .form-section button {
+      background-color: #ff5e99;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .form-section button:hover {
+      background-color: #ff4182;
+    }
+    .testimonial-section {
+      background-color: #fff0f7;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 900px;
+      margin: 0 auto 60px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      animation: fadeUp 2s ease-in-out;
+    }
+    .testimonial-section h2 {
+      text-align: center;
+      color: #ff5e99;
+      margin-bottom: 30px;
+    }
+    .testimonial {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .testimonial p {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    .testimonial span {
+      font-weight: bold;
+      color: #ff5e99;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      font-size: 0.9rem;
+      color: #999;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo_cerca.png" alt="Logo CERCA">
+    <nav>
+      <a href="#features">Funcionalidades</a>
+      <a href="#formulario">Descargar</a>
+      <a href="#testimonios">Testimonios</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Conecta desde el corazón</h1>
+    <p>CERCA es la nueva red social para parejas nuevas y personas que están comenzando algo especial. Comparte, reta, ríe y sueña junto a quien podría ser tu persona favorita.</p>
+    <a href="#formulario"><button class="cta-button">Únete a la espera 💖</button></a>
+  </section>
+
+  <section class="features" id="features">
+    <div class="feature">
+      <h3>🎯 Retos Divertidos</h3>
+      <p>Conéctate a través de desafíos semanales que fortalecen vínculos de manera creativa.</p>
+    </div>
+    <div class="feature">
+      <h3>🧠 Juegos & Tests</h3>
+      <p>Descubre cuánto se conocen con test de compatibilidad y dinámicas divertidas.</p>
+    </div>
+    <div class="feature">
+      <h3>💬 Chat con Corazón</h3>
+      <p>Chatea en un espacio especial representado por un corazón, solo para ustedes dos.</p>
+    </div>
+    <div class="feature">
+      <h3>📸 Publicaciones al Estilo Social</h3>
+      <p>Sube fotos, pensamientos y momentos como en Instagram. ¡Exprésate con libertad!</p>
+    </div>
+    <div class="feature">
+      <h3>🎥 Feed Estilo TikTok</h3>
+      <p>Explora contenido emocional, romántico y divertido para mantenerte conectado.</p>
+    </div>
+    <div class="feature">
+      <h3>📝 Metas & Momentos</h3>
+      <p>Registra fechas importantes y escribe metas para crecer juntos.</p>
+    </div>
+  </section>
+
+  <section class="form-section" id="formulario">
+    <h2>¡Sé de los primeros en probar CERCA!</h2>
+    <form action="#" method="post">
+      <input type="email" placeholder="Tu correo electrónico" required />
+      <button type="submit">Quiero estar CERCA 💌</button>
+    </form>
+  </section>
+
+  <section class="testimonial-section" id="testimonios">
+    <h2>Lo que dicen los primeros que la probaron</h2>
+    <div class="testimonial">
+      <p>"Con CERCA nos sentimos más conectados, incluso en días difíciles. Es como una cita sorpresa cada semana."</p>
+      <span>– Laura y Andrés</span>
+    </div>
+    <div class="testimonial">
+      <p>"Los juegos y los retos son lo mejor. Reímos como nunca y hablamos de cosas que no sabíamos cómo sacar."</p>
+      <span>– Valentina y Diego</span>
+    </div>
+    <div class="testimonial">
+      <p>"Nos ayudó a fortalecer nuestra relación a distancia. CERCA fue nuestro puente de conexión emocional."</p>
+      <span>– Sofía y Tomás</span>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 CERCA. Todos los derechos reservados.
+  </footer>
+</body>
+</html>
